@@ -1,22 +1,26 @@
 /* 1. Import Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Nunito:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Nunito:wght@400;600;700;800&Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 /* 2. Custom Theme Variables (Tailwind v4) */
 @theme {
-  --font-marker: "Permanent Marker", cursive;
+  --font-marker: "Nanum Pen Script", cursive;
   --font-nunito: "Nunito", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
   
   --color-barsik-green: #00ffa3;
   --color-barsik-dark: #0d121f;
   --color-barsik-card: #131b2c;
   
   --animate-float: float 6s ease-in-out infinite;
+  --font-barsik-gradient: background: linear-gradient(98.64deg, #2AECD5 5.21%, #2AEC8F 99.3%);
+
 }
 
 /* 3. Global Styles */
 body {
   background-color: var(--color-barsik-dark);
+  background: linear-gradient(105.42deg, #181F2D 1.32%, #111419 98.73%);
   font-family: var(--font-nunito);
   overflow-x: hidden;
   color: white;
@@ -34,9 +38,20 @@ body {
 
 /* Subtle background doodle pattern */
 .bg-doodles {
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("./assets/barsik/BG.svg");
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 0;
+}
+
+.hdw {
+  background: linear-gradient(180deg, #1C272C 0%, #202432 100%);
+
+}
+
+.hdw .inner {
+  background-image: url("./assets/barsik/hdBg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
